@@ -15,10 +15,7 @@ def calc_prob(diameter):
     diameter_prob[diameter] = {}
 
     # Number of times this disc crosses at least 1, 2, 3, and 4 lines in 4444444 tosses
-    crossed1 = 0
-    crossed2 = 0
-    crossed3 = 0
-    crossed4 = 0
+    crossed1, crossed2, crossed3, crossed4 = 0, 0, 0, 0
 
     for i in range(0, num_tosses):
         center_pos = random.uniform(1, num_lines)   # Center of disc
@@ -66,10 +63,7 @@ def calc_prob(diameter):
     print(f"P(4 Line) = {diameter_prob[diameter][4]}\n")
 
 # Calculate probabilities of discs of each diameter crossing at least 1, 2, 3, and 4 lines
-prob_1_line = []
-prob_2_line = []
-prob_3_line = []
-prob_4_line = []
+prob_1_line, prob_2_line, prob_3_line, prob_4_line = [], [], [], []
 for diameter in diameters:
     calc_prob(diameter)
     prob_1_line.append(diameter_prob[diameter][1])
