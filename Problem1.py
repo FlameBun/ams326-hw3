@@ -25,7 +25,7 @@ def calc_prob(diameter):
         if center_pos.is_integer(): # Center of disc is directly on top of a line
             num_lines_crossed = 1
             top = center_pos + 1    # Position of next top line
-            bottom = center_pos - 1 # Positon of next bottom line
+            bottom = center_pos - 1 # Position of next bottom line
         else: # Center of disc is not on top of a line
             num_lines_crossed = 0
             top = math.ceil(center_pos)     # Position of top line closest to center of disc
