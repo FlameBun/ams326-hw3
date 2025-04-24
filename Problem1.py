@@ -72,10 +72,10 @@ for diameter in diameters:
     prob_4_line.append(diameter_prob[diameter][4])
 
 # Plot probabilities as a function of diameter for crossing at least 1, 2, 3, and 4 lines
-plot.plot(diameters, prob_1_line, label="P(1 Line)", color="red", linestyle="solid")
-plot.plot(diameters, prob_2_line, label="P(2 Line)", color="green", linestyle="dashed")
-plot.plot(diameters, prob_3_line, label="P(3 Line)", color="blue", linestyle="dotted")
-plot.plot(diameters, prob_4_line, label="P(4 Line)", color="orange", linestyle="dashdot")
+plot.plot(diameters, prob_1_line, label="P(1 Line)", color="red", linestyle="solid", marker="o")
+plot.plot(diameters, prob_2_line, label="P(2 Line)", color="green", linestyle="dashed", marker="^")
+plot.plot(diameters, prob_3_line, label="P(3 Line)", color="blue", linestyle="dotted", marker="s")
+plot.plot(diameters, prob_4_line, label="P(4 Line)", color="orange", linestyle="dashdot", marker="x")
 plot.legend()
 plot.xlabel("Diameter d")
 plot.ylabel("Probability P(d)")
