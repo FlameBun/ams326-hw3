@@ -31,10 +31,17 @@ while x + step >= 0:
     y = new_y
     y_prime = dy_dx(x, y)
 
+# Print initial point and every 50000th trajectory point in TrajectoryPoints.txt
+with open("TrajectoryPoints.txt", "w") as file:
+    print(f"({x_values[0]}, {y_values[0]})", file=file)
+    for i in range(len(x_values)):
+        if (i + 1) % 50000 == 0:
+            print(f"({x_values[i]}, {y_values[i]})", file=file)
+
 # Plot plane's trajectory
-print(f"{len(x_values)} {len(y_values)}")
-print(f"Initial Point: (x: {x_values[0]}, y: {y_values[0]})")
-print(f"Final Point: (x: {x_values[len(x_values) - 1]}, y: {y_values[len(y_values) - 1]})")
+print("**Point Format (x, y)")
+print(f"Initial Point: ({x_values[0]}, {y_values[0]})")
+print(f"Final Point: ({x_values[len(x_values) - 1]}, {y_values[len(y_values) - 1]})")
 plot.plot(x_values, y_values)
 plot.title("Plane Trajectory")
 plot.xlabel("x")
