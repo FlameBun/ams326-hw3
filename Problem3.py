@@ -17,6 +17,7 @@ x = a
 y = 0
 y_prime = dy_dx(x, y)
 
+# List of trajectory points
 x_values = [x]
 y_values = [y]
 
